@@ -586,6 +586,22 @@ video {
   top: 1rem;
 }
 
+.left-\[50\%\] {
+  left: 50%;
+}
+
+.right-\[50\%\] {
+  right: 50%;
+}
+
+.left-\[\] {
+  left: ;
+}
+
+.left-\[5\%\] {
+  left: 5%;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -646,12 +662,26 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -712,6 +742,62 @@ video {
 
 .h-\[\] {
   height: ;
+}
+
+.h-\[2000px\] {
+  height: 2000px;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-\[1\] {
+  height: 1;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[10rem\] {
+  height: 10rem;
+}
+
+.h-\[200rem\] {
+  height: 200rem;
+}
+
+.h-\[20rem\] {
+  height: 20rem;
+}
+
+.h-\[25rem\] {
+  height: 25rem;
+}
+
+.h-\[30rem\] {
+  height: 30rem;
+}
+
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.h-\[rem\] {
+  height: rem;
+}
+
+.h-\[90\] {
+  height: 90;
+}
+
+.h-\[35rem\] {
+  height: 35rem;
+}
+
+.h-\[3rem\] {
+  height: 3rem;
 }
 
 .w-10 {
@@ -786,6 +872,42 @@ video {
   width: 55vw;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[85vw\] {
+  width: 85vw;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[90\] {
+  width: 90;
+}
+
+.w-\[calc\(\)\] {
+  width: calc();
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
+.w-\[100\] {
+  width: 100;
+}
+
 .max-w-\[\] {
   max-width: ;
 }
@@ -802,6 +924,14 @@ video {
   cursor: pointer;
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -816,6 +946,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-evenly {
@@ -850,6 +984,24 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border-none {
   border-style: none;
 }
@@ -877,6 +1029,56 @@ video {
 .bg-slate-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(163 163 163 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -921,6 +1123,26 @@ video {
   --tw-gradient-to: #d4d4d8 var(--tw-gradient-to-position);
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -931,6 +1153,18 @@ video {
 
 .p-\[5px\] {
   padding: 5px;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .text-left {

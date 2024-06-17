@@ -85,6 +85,28 @@ a {
     transition: all 0.8s ease;
 }
 
+.card {
+    grid-template-rows: 3fr 1fr;
+}
+
+#productDescription {
+    grid-template-rows: 2fr 1fr;
+}
+
+#productImage img {
+    width: calc(0.9 * (90vw / 4));
+    height: calc(35vw * 0.75);
+}
+
+.card {
+    transition: all 0.1s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.02, 1.02); 
+    box-shadow: -8px 11px 16px 4px rgba(0,0,0,0.29);
+}
+
 @media screen and (max-width: 640px) {
     #logo {
         width: 10rem;
@@ -166,4 +188,4 @@ a {
     .slide.active {
         opacity: 1; 
     }
-}
+}  
