@@ -60,17 +60,17 @@ a {
 
 #appear {
     transition: 0.5s ease-in;
-    height: fit-content;
+    height: 100vh;
 }
 
 .transition-left {
     transition: left 0.5s ease-in-out;
 }
 .slide-in {
-    left: 0 !important;
+    left: 0;
 }
 .slide-out {
-    left: 100% !important;
+    left: 100%;
 }
 
 #sectionThree ul li a i,
