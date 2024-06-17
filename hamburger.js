@@ -1,13 +1,13 @@
 
 
-let ham = document.getElementById("hamMenu");
+let ham = document.getElementById("appear");
 
 const goToHam = () => {
-    ham.style.display = `flex`;
+    ham.style.display = `block`;
     ham.style.left = 0;
 }
 
 const backToHome = () => {
-    ham.style.left = `100%`;
     ham.style.display = `hidden`;
+    ham.style.left = `100%`;
 }

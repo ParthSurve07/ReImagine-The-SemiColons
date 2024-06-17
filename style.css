@@ -58,8 +58,18 @@ a {
     margin-top: 1rem;
 }
 
-#hamMenu {
-    transition: all 0.5s ease-in;
+#appear {
+    transition: 0.5s ease-in;
+}
+
+.transition-left {
+    transition: left 0.5s ease-in-out;
+}
+.slide-in {
+    left: 0 !important;
+}
+.slide-out {
+    left: 100% !important;
 }
 
 @media screen and (max-width: 640px) {
