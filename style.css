@@ -60,6 +60,7 @@ a {
 
 #appear {
     transition: 0.5s ease-in;
+    height: fit-content;
 }
 
 .transition-left {
