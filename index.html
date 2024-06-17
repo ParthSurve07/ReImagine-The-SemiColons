@@ -80,11 +80,11 @@
     </div>
 
     <!-- CATALOGUE WITH IMAGES SLIDING-->
-     <div id="sliderContainer" class="w-[70vw] h-[35rem] m-auto flex justify-center items-center relative overflow-hidden">
-        <div id="arrow-r" class="absolute left-[94.1%] text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goNext()">
+    <!-- <div id="sliderContainer" class="w-[70vw] m-auto flex justify-center items-center relative overflow-hidden">
+        <div id="arrow-r" class="absolute right-0 top-0 text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goNext()">
             <i class='bx bx-right-arrow'></i>
         </div>
-        <div id="arrow-l" class="absolute right-[94.1%] text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goBack()"> 
+        <div id="arrow-l" class="absolute left-0 top-0 text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goBack()"> 
             <i class='bx bx-left-arrow'></i>
         </div>
         <div id="sliderImages" class="flex items-center justify-center gap-4 absolute top-0">
@@ -94,8 +94,75 @@
                 <img src="slider3.jpg" alt="3" class="absolute" id="slide">
             </div>
         </div>
-     </div>
-     <script src="slide.js"></script>
+    </div>
+    <script src="slide.js"></script> -->
+
+    <div id="sliderContainer" class="w-[70vw] m-auto flex justify-center items-center relative overflow-hidden">
+        <div id="arrow-r" class="absolute right-0 top-0 text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goNext()">
+            <i class='bx bx-right-arrow'></i>
+        </div>
+        <div id="arrow-l" class="absolute left-0 top-0 text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goBack()"> 
+            <i class='bx bx-left-arrow'></i>
+        </div>
+        <div id="sliderImages" class="flex items-center justify-center gap-4 absolute top-0">
+            <div class="w-[70vw]">
+                <img src="slider1.jpg" alt="1" class="slide">
+                <img src="slider2.jpg" alt="2" class="slide">
+                <img src="slider3.jpg" alt="3" class="slide">
+            </div>
+        </div>
+    </div>
+    <script> 
+        // Function to update the height based on the current width of the container
+function updateHeight() {
+    const container = document.getElementById('sliderContainer');
+    const activeSlide = container.querySelector('.slide.active');
+    
+    if (activeSlide) {
+        // Get the natural dimensions of the active slide
+        const naturalWidth = activeSlide.naturalWidth;
+        const naturalHeight = activeSlide.naturalHeight;
+        
+        // Calculate the height based on the current width
+        const currentWidth = container.clientWidth;
+        const newHeight = (naturalHeight / naturalWidth) * currentWidth;
+        
+        container.style.height = `${newHeight}px`;
+    }
+}
+
+// Initialize the first slide
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        slides[0].classList.add('active');
+        updateHeight(); // Set initial height
+    }
+    
+    window.addEventListener('resize', updateHeight); // Update height on resize
+});
+
+// Functions to navigate slides
+function goNext() {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+    updateHeight();
+}
+
+function goBack() {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    updateHeight();
+}
+
+    </script>
+    
 
     <script src="script.js"></script>
 </body>
