@@ -10,4 +10,48 @@ body {
 
 #select option {
     font-family: "Varela Round";
+}  
+
+@media screen and (min-width: 640px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #logo {
+        width: 10rem;
+    }
+
+    #list {
+        font-size: smaller;
+    }
+
+    #logIn {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 8rem;
+    }
+
+    #search {
+        width: 16rem;
+    }
+
+    #select {
+        display: none;
+    }
 }

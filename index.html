@@ -14,12 +14,12 @@
 <body class="m-0 p-0 box-border relative bg-slate-300">
 
     <!-- NAVBAR -->
-    <div class="w-full h-[8rem] bg-slate-300 flex justify-evenly items-center relative">
+    <div id="navbar" class="w-full h-[8rem] bg-slate-300 flex justify-evenly items-center relative">
         <div>
-            <img src="logo.svg" alt="" class="w-[14rem]">
+            <img src="logo.svg" alt="" class="w-[14rem]" id="logo">
         </div>
         <div>
-            <ul class="flex gap-7">
+            <ul class="flex gap-7" id="list">
                 <li><a href="">WOMEN</a></li>
                 <li><a href="">MEN</a></li>
                 <li><a href="">KIDS</a></li>
@@ -29,21 +29,24 @@
     </div>
 
     <!-- CONTENT BELOW NAVBAR -->
-    <div class="bg-slate-600 h-14 flex justify-evenly items-center relative">
+    <div id="bNavbar" class="bg-slate-600 h-14 flex justify-evenly items-center relative w-[100%]">
         <div>
             <input type="search" name="" id="search" placeholder="Search"
-                class="p-[5px] w-[19rem] text-left text-sm focus:outline-none rounded-md">
+                class="p-[5px] w-[20rem] text-left text-sm focus:outline-none rounded-md">
         </div>
-        <div>
+        <div id="logIn">
             <ul class="flex gap-7 text-white">
                 <li><a href="">LOG IN</a></li>
                 <li><a href="">SHOPPING BAG</a></li>
             </ul>
         </div>
+        <div class="text-white text-3xl h-[30px] w-[30px]" id="menu">
+            <a href="" class="h-[30px]"><i class='bx bx-menu'></i></a>
+        </div>
     </div>
 
     <!-- SELECT BOX -->
-    <div class="w-[350px] flex justify-evenly items-center my-5 mx-auto relative z-10">
+    <div id="select" class="w-[350px] flex justify-evenly items-center my-5 mx-auto relative z-10">
         <label for="Categories">Browse By Categories</label>
         <select name="Categories" id="select" class="border-none w-40 bg-slate-500 text-white rounded-md">
             <option value="All">All</option>
