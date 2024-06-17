@@ -770,6 +770,18 @@ video {
   width: 45vw;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[vw\] {
+  width: vw;
+}
+
+.w-\[55vw\] {
+  width: 55vw;
+}
+
 .max-w-\[\] {
   max-width: ;
 }
