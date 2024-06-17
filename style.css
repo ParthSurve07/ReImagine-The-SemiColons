@@ -7,3 +7,7 @@ body {
 #select {
     padding: 6px 10px 6px 7px;
 }
+
+#select option {
+    font-family: "Varela Round";
+}
