@@ -674,6 +674,22 @@ video {
   height: 800px;
 }
 
+.h-\[900px\] {
+  height: 900px;
+}
+
+.h-\[00px\] {
+  height: 00px;
+}
+
+.h-\[100\] {
+  height: 100;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -736,6 +752,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
