@@ -7,11 +7,12 @@
     <title>ZARA India | New Collection Online</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body class="m-0 p-0 box-border relative bg-slate-300">
+<body class="m-0 p-0 box-border relative bg-slate-300 h-[1000px]">
 
     <!-- NAVBAR -->
     <div id="navbar" class="w-full h-[8rem] bg-slate-300 flex justify-evenly items-center relative">
@@ -41,12 +42,14 @@
             </ul>
         </div>
         <div class="text-white text-3xl h-[30px] w-[30px]" id="menu">
-            <a href="" class="h-[30px]"><i class='bx bx-menu'></i></a>
+            <a href="" class="h-[30px]" onclick="hamburger()"><i class='bx bx-menu'></i></a>
         </div>
-    </div>
+    </div> 
+
+    <script src="hamburger.js"></script>
 
     <!-- SELECT BOX -->
-    <div id="select" class="w-[350px] flex justify-evenly items-center my-5 mx-auto relative z-10">
+    <div id="select" class="w-[350px] flex justify-evenly items-center my-5 mx-auto relative">
         <label for="Categories">Browse By Categories</label>
         <select name="Categories" id="select" class="border-none w-40 bg-slate-500 text-white rounded-md">
             <option value="All">All</option>
@@ -76,11 +79,23 @@
         </select>
     </div>
 
-    <!-- CATALOGUE -->
-    <div class="main_container w-[95vw] h-[1000px] m-auto">
-        
-    </div>
-
+    <!-- CATALOGUE WITH IMAGES SLIDING-->
+     <div id="sliderContainer" class="w-[70vw] h-[35rem] m-auto flex justify-center items-center relative overflow-hidden">
+        <div id="arrow-r" class="absolute left-[94.1%] text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goNext()">
+            <i class='bx bx-right-arrow'></i>
+        </div>
+        <div id="arrow-l" class="absolute right-[94.1%] text-white z-20 h-[100%] w-[4rem] flex justify-center items-center cursor-pointer" onclick="goBack()"> 
+            <i class='bx bx-left-arrow'></i>
+        </div>
+        <div id="sliderImages" class="flex items-center justify-center gap-4 absolute top-0">
+            <div class="w-[70vw]">
+                <img src="slider1.jpg" alt="1" class="absolute" id="slide">
+                <img src="slider2.jpg" alt="2" class="absolute" id="slide">
+                <img src="slider3.jpg" alt="3" class="absolute" id="slide">
+            </div>
+        </div>
+     </div>
+     <script src="slide.js"></script>
 
     <script src="script.js"></script>
 </body>

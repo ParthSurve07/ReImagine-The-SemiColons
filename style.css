@@ -12,6 +12,19 @@ body {
     font-family: "Varela Round";
 }  
 
+#ham {
+    position: relative;
+}
+
+#slide {
+    transition: 1.2s;
+} 
+
+#arrow-r,
+#arrow-l {
+    background-color: rgba(71, 85, 105, 0.5);
+}
+
 @media screen and (min-width: 640px) {
     #menu {
         display: none;
