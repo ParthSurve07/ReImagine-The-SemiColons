@@ -72,6 +72,18 @@ a {
     left: 100% !important;
 }
 
+#sectionThree ul li a i,
+#sectionOne li {    
+    transition: all 0.7s ease;
+}
+
+
+#sectionThree ul li a i:hover,
+#sectionOne li:hover {
+    color: white;
+    transition: all 0.8s ease;
+}
+
 @media screen and (max-width: 640px) {
     #logo {
         width: 10rem;
