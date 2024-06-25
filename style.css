@@ -1,0 +1,42 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.verala {
+    font-family: "Varela Round";
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* Category Boxes */
+#category_boxes img {
+    width: 20vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#category_boxes img:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#category_boxes p {
+    transition: all 0.3s ease-in-out;
+    letter-spacing: -2px;
+    color: white;
+    font-family: "Nova Round";
+    font-size: x-large;
+    font-weight: 900;
+    position: absolute;
+    opacity: 0;
+    top: 75%;
+}
