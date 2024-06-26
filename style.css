@@ -19,6 +19,7 @@ textarea:focus, input:focus{
 /* Navbar */
 nav {
     margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 #logo {
@@ -77,10 +78,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    #login_cart{
-        font-size: 0.7rem;
-    }
-
     #logo img {
         width: 8rem;
     }
