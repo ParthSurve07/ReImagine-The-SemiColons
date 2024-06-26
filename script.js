@@ -1,100 +1,185 @@
 
 
+// Loading animation of navbar
+const navbar = document.querySelector("#navbar");
+const loading_animation = () => {
+
+}
+
 // For login and cart button
-const login = document.querySelector("#login");
-const cart = document.querySelector("#cart");
-const search = document.querySelector("#search_small");
-const login1 = document.querySelector("#login1");
+const login_button_animation = () => {
+    const login = document.querySelector("#login");
+    const cart = document.querySelector("#cart");
+    const search = document.querySelector("#search_small");
+    const login1 = document.querySelector("#login1");
 
-login.addEventListener('mouseenter', () => {
-    login.style.color = "black";
-    login.style.backgroundColor = "white";
-});
+    login.addEventListener('mouseenter', () => {
+        gsap.to(login, {
+            color: 'black',
+            backgroundColor: 'white'
+        })
+    });
 
-login.addEventListener('mouseleave', () => {
-    login.style.color = "white";
-    login.style.backgroundColor = "black";
-});
+    login.addEventListener('mouseleave', () => {
+        gsap.to(login, {
+            color: 'white',
+            backgroundColor: 'black'
+        })
+    });
 
-cart.addEventListener('mouseenter', () => {
-    cart.style.color = "black";
-    cart.style.backgroundColor = "white";
-});
+    cart.addEventListener('mouseenter', () => {
+        gsap.to(cart, {
+            color: 'black',
+            backgroundColor: 'white'
+        })
+    });
 
-cart.addEventListener('mouseleave', () => {
-    cart.style.color = "white";
-    cart.style.backgroundColor = "black";
-});
+    cart.addEventListener('mouseleave', () => {
+        gsap.to(cart, {
+            color: 'white',
+            backgroundColor: 'black'
+        })
+    });
 
-search.addEventListener('mouseenter', () => {
-    search.style.color = "black";
-    search.style.backgroundColor = "white";
-});
+    search.addEventListener('mouseenter', () => {
+        gsap.to(search, {
+            color: 'black',
+            backgroundColor: 'white'
+        })
+    });
 
-search.addEventListener('mouseleave', () => {
-    search.style.color = "white";
-    search.style.backgroundColor = "black";
-});
+    search.addEventListener('mouseleave', () => {
+        gsap.to(search, {
+            color: 'white',
+            backgroundColor: 'black'
+        })
+    });
 
-login1.addEventListener('mouseenter', () => {
-    login1.style.color = "black";
-    login1.style.backgroundColor = "white";
-});
+    login1.addEventListener('mouseenter', () => {
+        gsap.to(login1, {
+            color: 'black',
+            backgroundColor: 'white'
+        })
+    });
 
-login1.addEventListener('mouseleave', () => {
-    login1.style.color = "white";
-    login1.style.backgroundColor = "black";
-});
+    login1.addEventListener('mouseleave', () => {
+        gsap.to(login1, {
+            color: 'white',
+            backgroundColor: 'black'
+        })
+    });
+}
+login_button_animation();
 
 // Transition for category boxes
-const women = document.querySelector("#women");
-const wText = document.querySelector("#wText");
+const category_animation = () => {
+    const women = document.querySelector("#women");
+    const wText = document.querySelector("#wText");
+    const men = document.querySelector("#men");
+    const mText = document.querySelector("#mText");
+    const kids = document.querySelector("#kids");
+    const kText = document.querySelector("#kText");
+    const beauty = document.querySelector("#beauty");
+    const bText = document.querySelector("#bText");
 
-women.addEventListener('mouseenter', () => {
-    wText.style.opacity = 1;
-    wText.style.scale = "250%";
-});
+    women.addEventListener('mouseenter', () => {
+        gsap.to(wText, {
+            opacity: 1,
+            duration: 0.1,
+            scaleY: '250%',
+            scaleX: '250%',
+        })
+    })
 
-women.addEventListener('mouseleave', () => {
-    wText.style.opacity = 0;
-    wText.style.scale = "100%";
-});
+    women.addEventListener('mouseleave', () => {
+        gsap.to(wText, {
+            opacity: 0,
+            duration: 0.15,
+            scaleY: '100%',
+            scaleX: '100%',
+        })
+    })
 
-const men = document.querySelector("#men");
-const mText = document.querySelector("#mText");
+    men.addEventListener('mouseenter', () => {
+        gsap.to(mText, {
+            opacity: 1,
+            duration: 0.1,
+            scaleY: '250%',
+            scaleX: '250%',
+        })
+    })
 
-men.addEventListener('mouseenter', () => {
-    mText.style.opacity = 1;
-    mText.style.scale = "250%";
-});
+    men.addEventListener('mouseleave', () => {
+        gsap.to(mText, {
+            opacity: 0,
+            duration: 0.15,
+            scaleY: '100%',
+            scaleX: '100%',
+        })
+    })
 
-men.addEventListener('mouseleave', () => {
-    mText.style.opacity = 0;
-    mText.style.scale = "100%";
-});
+    kids.addEventListener('mouseenter', () => {
+        gsap.to(kText, {
+            opacity: 1,
+            duration: 0.1,
+            scaleY: '250%',
+            scaleX: '250%',
+        })
+    })
 
-const kids = document.querySelector("#kids");
-const kText = document.querySelector("#kText");
+    kids.addEventListener('mouseleave', () => {
+        gsap.to(kText, {
+            opacity: 0,
+            duration: 0.15,
+            scaleY: '100%',
+            scaleX: '100%',
+        })
+    })
 
-kids.addEventListener('mouseenter', () => {
-    kText.style.opacity = 1;
-    kText.style.scale = "250%";
-});
+    beauty.addEventListener('mouseenter', () => {
+        gsap.to(bText, {
+            opacity: 1,
+            duration: 0.1,
+            scaleY: '250%',
+            scaleX: '250%',
+        })
+    })
 
-kids.addEventListener('mouseleave', () => {
-    kText.style.opacity = 0;
-    kText.style.scale = "100%";
-});
+    beauty.addEventListener('mouseleave', () => {
+        gsap.to(bText, {
+            opacity: 0,
+            duration: 0.15,
+            scaleY: '100%',
+            scaleX: '100%',
+        })
+    })
 
-const beauty = document.querySelector("#beauty");
-const bText = document.querySelector("#bText");
+    gsap.from('#category_boxes #women', {
+        y: 10,
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.45
+    })
 
-beauty.addEventListener('mouseenter', () => {
-    bText.style.opacity = 1;
-    bText.style.scale = "250%";
-});
+    gsap.from('#category_boxes #men', {
+        y: 10,
+        opacity: 0,
+        delay: 0.7,
+        duration: 0.45
+    })
 
-beauty.addEventListener('mouseleave', () => {
-    bText.style.opacity = 0;
-    bText.style.scale = "100%";
-});
+    gsap.from('#category_boxes #kids', {
+        y: 10,
+        opacity: 0,
+        delay: 0.9,
+        duration: 0.45
+    })
+
+    gsap.from('#category_boxes #beauty', {
+        y: 10,
+        opacity: 0,
+        delay: 1.1,
+        duration: 0.45
+    })
+}
+category_animation();

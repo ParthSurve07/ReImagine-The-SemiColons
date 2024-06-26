@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    color: white;
+    background-color: black;
+}
+
 .verala {
     font-family: "Varela Round";
 }
@@ -25,17 +30,6 @@ nav {
 #logo {
     margin-right: 7px;
 }
-
-/* ALTERNATE HERO CONTENT */
-#alternate_hero ul li {
-    color: black;
-    background-color: white;
-    padding: 0.2rem 1.25rem;
-    border: 2px solid black;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
 
 /* Category Boxes */
 #category_boxes {
@@ -67,7 +61,7 @@ nav {
 }
 
 /* Media query for navbar */
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     #logo {
         width: 7rem;
     }
@@ -77,13 +71,13 @@ nav {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #logo img {
         width: 8rem;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     #category_boxes {
         display: none;
     }
@@ -104,7 +98,7 @@ nav {
         display: none;
     }
 }
-@media screen and (min-width: 800px) {
+@media (min-width: 800px) {
     #alternate_hero {
         display: none;
     }
@@ -119,14 +113,14 @@ nav {
 }
 
 /* Media query for login cart */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     #login_cart{
         font-size: 0.8rem;
     }
 }
 
 /* Media query for category boxes */
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
     #category_boxes p {
         transition: all 0.3s ease-in-out;
         letter-spacing: -2px;
