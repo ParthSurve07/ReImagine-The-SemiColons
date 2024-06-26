@@ -3,6 +3,8 @@
 // For login and cart button
 const login = document.querySelector("#login");
 const cart = document.querySelector("#cart");
+const search = document.querySelector("#search_small");
+const login1 = document.querySelector("#login1");
 
 login.addEventListener('mouseenter', () => {
     login.style.color = "black";
@@ -22,6 +24,26 @@ cart.addEventListener('mouseenter', () => {
 cart.addEventListener('mouseleave', () => {
     cart.style.color = "white";
     cart.style.backgroundColor = "black";
+});
+
+search.addEventListener('mouseenter', () => {
+    search.style.color = "black";
+    search.style.backgroundColor = "white";
+});
+
+search.addEventListener('mouseleave', () => {
+    search.style.color = "white";
+    search.style.backgroundColor = "black";
+});
+
+login1.addEventListener('mouseenter', () => {
+    login1.style.color = "black";
+    login1.style.backgroundColor = "white";
+});
+
+login1.addEventListener('mouseleave', () => {
+    login1.style.color = "white";
+    login1.style.backgroundColor = "black";
 });
 
 // Transition for category boxes

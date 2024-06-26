@@ -16,7 +16,31 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+/* Navbar */
+nav {
+    margin-top: 1.2rem;
+}
+
+#logo {
+    margin-right: 7px;
+}
+
+/* ALTERNATE HERO CONTENT */
+#alternate_hero ul li {
+    color: black;
+    background-color: white;
+    padding: 0.2rem 1.25rem;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
 /* Category Boxes */
+#category_boxes {
+    cursor: pointer;
+}
+
 #category_boxes img {
     width: 20vw;
     height: 30vw;
@@ -34,9 +58,87 @@ textarea:focus, input:focus{
     letter-spacing: -2px;
     color: white;
     font-family: "Nova Round";
-    font-size: x-large;
+    font-size: 24px;
     font-weight: 900;
     position: absolute;
     opacity: 0;
     top: 75%;
+}
+
+/* Media query for navbar */
+@media screen and (max-width: 500px) {
+    #logo {
+        width: 7rem;
+    }
+
+    #login_cart {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #login_cart{
+        font-size: 0.7rem;
+    }
+
+    #logo img {
+        width: 8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #category_boxes {
+        display: none;
+    }
+
+    #alternate_hero {
+        display: block;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #search_small {
+        display: block;
+    }
+
+    #login {
+        display: none;
+    }
+}
+@media screen and (min-width: 800px) {
+    #alternate_hero {
+        display: none;
+    }
+
+    #search_small {
+        display: none;
+    }
+
+    #login1 {
+        display: none;
+    }
+}
+
+/* Media query for login cart */
+@media screen and (max-width: 1024px) {
+    #login_cart{
+        font-size: 0.8rem;
+    }
+}
+
+/* Media query for category boxes */
+@media screen and (max-width: 1150px) {
+    #category_boxes p {
+        transition: all 0.3s ease-in-out;
+        letter-spacing: -2px;
+        color: white;
+        font-family: "Nova Round";
+        font-size: 18px;
+        font-weight: 900;
+        position: absolute;
+        opacity: 0;
+        top: 75%;
+    }
 }

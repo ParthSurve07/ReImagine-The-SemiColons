@@ -23,14 +23,18 @@
             <input type="search" name="search" id="search" placeholder="Search" class="w-[28vw] px-6 py-2 rounded-[50px] bg-gray-200">
             <i class="fa-solid fa-magnifying-glass absolute top-[27%] right-[6%] cursor-pointer"></i>
         </div>
-        <div id="login_cart" class="flex gap-4 items-center justify-between">
+        <div id="login_cart" class="flex gap-3 items-center justify-between">
+            <div id="search_small" class="bg-black text-white py-2 px-3 rounded-[50px] cursor-pointer border-2 border-black">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div id="login" class="bg-black text-white py-2 px-5 rounded-[50px] cursor-pointer border-2 border-black">Log In</div>
+            <div id="login1" class="bg-black text-white py-2 px-3 rounded-[50px] cursor-pointer border-2 border-black "><i class="fa-solid fa-user"></i></div>
             <div id="cart" class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black"><i class="fa-solid fa-cart-shopping"></i></div>
         </div>
     </nav>
 
     <!-- HERO CONTENT -->
-    <div id="category_boxes" class="w-[90%] mx-auto my-12 p-3 flex items-center justify-evenly">
+    <div id="category_boxes" class="w-[90vw] mx-auto my-12 p-3 flex items-center justify-evenly">
         <div id="women" class="flex flex-col items-center relative box_of_images">
             <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="">
             <P id="wText">WOMEN</P>
@@ -47,6 +51,16 @@
             <img src="https://plus.unsplash.com/premium_photo-1683121409041-076759249d56?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             <p id="bText">BEAUTY</p>
         </div>
+    </div>
+
+    <!-- ALTERNATE HERO CONTENT -->
+    <div id="alternate_hero" class="w-[90vw] mx-auto my-12 overflow-scroll">
+        <ul class="flex justify-center items-center gap-4">
+            <li>Women</li>
+            <li>Men</li>
+            <li>Kids</li>
+            <li>Beauty</li>
+        </ul>
     </div>
 
 
