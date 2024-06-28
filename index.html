@@ -86,7 +86,7 @@
             <div id="login_text" class="text-4xl font-[Poppins]">Log In</div>
             <div id="number_container" class="flex flex-col w-[85%] gap-3">
                 <label for="mobile_number">Mobile number :</label>
-                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)"/>
+                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10" oninput="checkLength(event)"/>
             </div>
             <div id="btn_container" class="w-[10vw]">
                 <button id="otp_button" class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>
@@ -111,7 +111,7 @@
             <div id="login_text" class="text-4xl font-[Poppins]">Log In</div>
             <div id="number_container" class="flex flex-col w-[100%] gap-3">
                 <label for="mobile_number">Mobile number :</label>
-                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)"/>
+                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10" oninput="checkLength(event)"/>
             </div>
             <div id="btn_container" class="w-[10vw]">
                 <button id="otp_button" class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>

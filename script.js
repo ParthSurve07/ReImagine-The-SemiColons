@@ -293,3 +293,10 @@ const isNumber = (evt) => {
         evt.preventDefault();
     }
 }
+
+const checkLength = (event) => {
+    const input = event.target;
+    if (input.value.length > 10) {
+        input.value = input.value.slice(0, 10);
+    }
+}
