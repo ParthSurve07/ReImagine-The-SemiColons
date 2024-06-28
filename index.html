@@ -20,7 +20,7 @@
 
 <body class="verala tracking-tight text-nowrap relative">
     <!-- NAVBAR -->
-    <div id="navbar" class="">
+    <div id="navbar" class="hidden">
         <nav class="flex justify-between items-center px-4 py-4 sticky top-0 w-[87vw] mx-auto z-10">
             <div id="logo">
                 <img src="logo.svg" alt="" class="w-40">
@@ -52,7 +52,7 @@
             </div>
         </nav>
     </div>
-    <div id="main" class="relative ">
+    <div id="main" class="relative hidden">
         <!-- HERO CONTENT -->
         <div id="category_boxes" class="w-[90vw] mx-auto my-12 p-3 flex items-center justify-evenly">
             <div id="women" class="flex flex-col items-center relative box_of_images">
@@ -80,7 +80,7 @@
     </div>
 
 
-    <div id="login_overlay" class="w-[100%] h-[100vh] justify-center items-center hidden absolute top-0 z-20">
+    <div id="login_overlay" class="w-[100%] h-[100vh] justify-center items-center flex absolute top-0 z-20">
         <div id="main_login" class="bg-white w-[40%] px-6 py-12 flex flex-col items-center rounded-[0.5rem] gap-4 relative">
             <div id="cancel" class="absolute top-[4%] right-[4%] text-xl cursor-pointer" onclick="close_login()"><i class="fa-solid fa-xmark"></i></div>
             <div id="login_text" class="text-4xl font-[Poppins]">Log In</div>
@@ -95,7 +95,7 @@
                 <p>By Continuing, I agree to the <a href=""><u>Terms & Conditions</u></a> & <a href=""><u>Privacy-Policy</u></a></p>
             </div>
             <div id="separation" class="w-[30vw] h-[1px] bg-black my-3"></div>
-            <div id="others" class="text-center flex flex-col gap-4">
+            <div id="others" class="text-center flex flex-col items-center gap-4 w-[60vw]">
                 <p>Or</p>
                 <div id="cont_buttons" class="flex items-center gap-4 w-[30vw] justify-center">
                     <div id="google_div" class="w-[60%]"><button id="google" class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i class="fa-brands fa-google"></i>Continue with Google</button></div>

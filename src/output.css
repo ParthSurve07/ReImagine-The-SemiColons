@@ -782,6 +782,26 @@ video {
   width: 500vw;
 }
 
+.w-\[80vw\] {
+  width: 80vw;
+}
+
+.w-\[60vw\] {
+  width: 60vw;
+}
+
+.w-\[60\] {
+  width: 60;
+}
+
+.w-\[6\] {
+  width: 6;
+}
+
+.w-\[6vw\] {
+  width: 6vw;
+}
+
 .max-w-\[80\%\] {
   max-width: 80%;
 }
