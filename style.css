@@ -102,6 +102,70 @@ nav {
     margin-right: 0.8vw;
 }
 
+.left_border {
+    border-left: 2px solid white;
+    border-width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.hover-line {
+    position: relative;
+    display: inline;
+    color: white;
+    text-decoration: none;
+}
+
+.hover-line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-line:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hover-line1 {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.hover-line1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-line1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#social ul li {
+    cursor: pointer;
+}
+
+#social ul li i {
+    padding-bottom: 0.25rem;
+}
+
 /* Media query for navbar */
 @media (max-width: 500px) {
     nav {
@@ -148,6 +212,8 @@ nav {
     #google_div {
         width: 65%;
     }
+
+    
 }
 
 @media (max-width: 768px) {
@@ -208,6 +274,56 @@ nav {
 
     #cont_buttons {
         width: 60vw;
+    }
+}
+
+@media (max-width: 960px) {
+    /* Footer */
+    footer {
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    #zara_logo img {
+        max-width: 10rem;
+    }
+
+    #description p {
+        font-size: 0.85rem;
+    }
+
+    #second {
+        width: 100%;
+    }
+
+    #first_f,
+    #second_f {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #second_f {
+        flex-direction: column;
+    }
+
+    #second_f_1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    #second_f_1 ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    #first {
+        padding: 2rem 0;
+        width: 80vw;
+    }
+
+    #follow {
+        width: 100%;
+        padding: 0 1rem;
     }
 }
 

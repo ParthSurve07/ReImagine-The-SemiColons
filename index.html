@@ -20,10 +20,10 @@
 
 <body class="verala tracking-tight text-nowrap relative">
     <!-- NAVBAR -->
-    <div id="navbar" class="">
+    <div id="navbar" class="sticky top-0 z-10">
         <nav class="flex justify-between items-center px-4 py-4 sticky top-0 w-[87vw] mx-auto z-10">
             <div id="logo">
-                <img src="logo.svg" alt="" class="w-40">
+                <a href="#"><img src="logo.svg" alt="" class="w-40"></a>
             </div>
             <div id="search" class="relative">
                 <input type="search" name="search" id="search" placeholder="Search"
@@ -79,52 +79,124 @@
 
     </div>
 
+    <!-- FOOTER -->
+    <footer class="bg-black w-[100%] flex  relative text-white">
+        <div id="first_f" class="w-[25%] text-wrap px-10 py-10">
+            <div id="zara_logo" class="w-[60%]">
+                <img src="footer.svg" alt="Zara logo">
+            </div>
+            <div id="description" class="my-8 w-[75%]">
+                <p>Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs,
+                    collections & lookbooks every week.</p>
+            </div>
+        </div>
+        <div id="second" class="flex flex-col w-[75%]">
+            <div  id="second_f" class="flex w-full">
+                <div id="second_f_1" class="w-[35%] py-10 px-10 text-[0.95rem]">
+                    <div id="browse_box" class="px-1 left_border">
+                        <span class="font-bold">Browse</span>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-2">
+                            <li><a href="" class="hover-line">Home</a></li>
+                            <li><a href="" class="hover-line">About Us</a></li>
+                            <li><a href="" class="hover-line">Services</a></li>
+                            <li><a href="" class="hover-line">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-[60%] text-wrap">
+                    <div id="first" class="flex flex-col py-10 px-8">
+                        <span class="left_border px-1 font-bold">Manufacturer</span>
+                        <span class="text-[0.85rem] text-wrap">INDUSTRIA DE DISENO TEXTIL_ S.A. (INDITEX, s_A_) <br> AVENIDA DE LA
+                            DIPUTACIÖN. EDIFICIO INDITEX. 15143, ARTEIXO (A CORONA). SPAIN</span>
+                    </div>
+                </div>
+            </div>
+            <div id="follow" class="w-full px-10">
+                <div id="follow_text" class="left_border px-1">
+                    <span>Follow us</span>
+                </div>
+                <div id="social">
+                    <ul class="flex gap-x-10 text-xl">
+                        <li><i class="fa-brands fa-instagram hover-line"></i></li>
+                        <li><i class="fa-brands fa-facebook-f hover-line"></i></li>
+                        <li><i class="fa-brands fa-x-twitter hover-line"></i></li>
+                        <li><i class="fa-brands fa-pinterest-p hover-line"></i></li>
+                        <li><i class="fa-brands fa-youtube hover-line"></i></li>
+                        <li><i class="fa-brands fa-spotify hover-line"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <div id="login_overlay" class="w-[100%] h-[100vh] justify-center items-center hidden absolute top-0 z-20">
-        <div id="main_login" class="bg-white w-[40%] px-6 py-12 flex flex-col items-center rounded-[0.5rem] gap-4 relative">
-            <div id="cancel" class="absolute top-[4%] right-[4%] text-xl cursor-pointer" onclick="close_login()"><i class="fa-solid fa-xmark"></i></div>
+        <div id="main_login"
+            class="bg-white w-[40%] px-6 py-12 flex flex-col items-center rounded-[0.5rem] gap-4 relative">
+            <div id="cancel" class="absolute top-[4%] right-[4%] text-xl cursor-pointer" onclick="close_login()"><i
+                    class="fa-solid fa-xmark"></i></div>
             <div id="login_text" class="text-4xl font-[Poppins]">Log In</div>
             <div id="number_container" class="flex flex-col w-[85%] gap-3">
                 <label for="mobile_number">Mobile number :</label>
-                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10" oninput="checkLength(event)"/>
+                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]"
+                    placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10"
+                    oninput="checkLength(event)" />
             </div>
             <div id="btn_container" class="w-[10vw]">
-                <button id="otp_button" class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>
+                <button id="otp_button"
+                    class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>
             </div>
             <div id="t_c" class="w-[30vw] text-wrap m-auto text-center">
-                <p>By Continuing, I agree to the <a href=""><u>Terms & Conditions</u></a> & <a href=""><u>Privacy-Policy</u></a></p>
+                <p>By Continuing, I agree to the <a href=""><u>Terms & Conditions</u></a> & <a
+                        href=""><u>Privacy-Policy</u></a></p>
             </div>
             <div id="separation" class="w-[30vw] h-[1px] bg-black my-3"></div>
             <div id="others" class="text-center flex flex-col items-center gap-4 w-[60vw]">
                 <p>Or</p>
                 <div id="cont_buttons" class="flex items-center gap-4 w-[30vw] justify-center">
-                    <div id="google_div" class="w-[60%]"><button id="google" class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i class="fa-brands fa-google"></i>Continue with Google</button></div>
-                    <div id="apple_div" class="w-[60%]"><button id="apple" class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i class="fa-brands fa-apple"></i>Continue with Apple</button></div>
+                    <div id="google_div" class="w-[60%]"><button id="google"
+                            class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i
+                                class="fa-brands fa-google"></i>Continue with Google</button></div>
+                    <div id="apple_div" class="w-[60%]"><button id="apple"
+                            class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i
+                                class="fa-brands fa-apple"></i>Continue with Apple</button></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="login_overlay2" class="w-[100vw] hidden absolute top-0">
-        <div id="main_login" class="bg-white w-[100vw] px-6 py-12 flex flex-col items-center rounded-[0.5rem] gap-4 relative">
-            <div id="cancel" class="absolute top-[4%] right-[4%] text-xl cursor-pointer" onclick="close_login2()"><i class="fa-solid fa-xmark"></i></div>
+        <div id="main_login"
+            class="bg-white w-[100vw] px-6 py-12 flex flex-col items-center rounded-[0.5rem] gap-4 relative">
+            <div id="cancel" class="absolute top-[4%] right-[4%] text-xl cursor-pointer" onclick="close_login2()"><i
+                    class="fa-solid fa-xmark"></i></div>
             <div id="login_text" class="text-4xl font-[Poppins]">Log In</div>
             <div id="number_container" class="flex flex-col w-[100%] gap-3">
                 <label for="mobile_number">Mobile number :</label>
-                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]" placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10" oninput="checkLength(event)"/>
+                <input id="mNumber" type="number" class="rounded-[0.5rem] bg-gray-300 py-3 px-4 w-[100%]"
+                    placeholder="Enter mobile number" onkeypress="isNumber(event)" maxlength="10"
+                    oninput="checkLength(event)" />
             </div>
             <div id="btn_container" class="w-[10vw]">
-                <button id="otp_button" class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>
+                <button id="otp_button"
+                    class="py-2 px-4 rounded-[0.5rem] bg-black text-white w-full border-2 border-black">Get OTP</button>
             </div>
             <div id="t_c" class="w-[50vw] text-wrap m-auto text-center">
-                <p>By Continuing, I agree to the <a href=""><u>Terms & Conditions</u></a> & <a href=""><u>Privacy-Policy</u></a></p>
+                <p>By Continuing, I agree to the <a href=""><u>Terms & Conditions</u></a> & <a
+                        href=""><u>Privacy-Policy</u></a></p>
             </div>
             <div id="separation" class="w-[30vw] h-[1px] bg-black my-3"></div>
             <div id="others" class="text-center flex flex-col gap-4">
                 <p>Or</p>
                 <div id="cont_buttons" class="flex items-center gap-4 w-[30vw] justify-center">
-                    <div id="google_div" class="w-[60%]"><button id="google" class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i class="fa-brands fa-google"></i>Continue with Google</button></div>
-                    <div id="apple_div" class="w-[60%]"><button id="apple" class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i class="fa-brands fa-apple"></i>Continue with Apple</button></div>
+                    <div id="google_div" class="w-[60%]"><button id="google"
+                            class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i
+                                class="fa-brands fa-google"></i>Continue with Google</button></div>
+                    <div id="apple_div" class="w-[60%]"><button id="apple"
+                            class="bg-black text-white py-1 px-3 rounded-[0.5rem] mx-1 border-2 border-black w-full text-wrap"><i
+                                class="fa-brands fa-apple"></i>Continue with Apple</button></div>
                 </div>
             </div>
         </div>
@@ -136,7 +208,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
