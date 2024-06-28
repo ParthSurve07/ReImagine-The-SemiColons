@@ -8,6 +8,12 @@ const loading_animation = () => {
         duraion: 4,
         delay: 0.4
     })
+    
+    gsap.from("footer", {
+        y: 150,
+        duraion: 5,
+        delay: 0.8
+    })
 }
 loading_animation();
 
