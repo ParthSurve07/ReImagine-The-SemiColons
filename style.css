@@ -71,7 +71,7 @@ nav {
 }
 
 #category_boxes img:hover {
-    opacity: 0.85;
+    opacity: 0.95;
     transition: opacity 0.2s ease-in-out;
 }
 
@@ -420,14 +420,3 @@ nav {
         width: 10vw;
     }
 }
-
-
-
-
-
-
-
-
-
-
-

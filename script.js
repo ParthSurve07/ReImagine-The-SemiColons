@@ -331,7 +331,10 @@ const add_product = () => {
         {img: "https://static.zara.net/assets/public/6a1c/8e52/ddc546758801/d799a4bed501/03431301620-a1/03431301620-a1.jpg?ts=1708507160553&w=607", des: "SHORT SLEEVE T-SHIRT", price: "₹ 1,190.00"}, 
         {img: "https://static.zara.net/assets/public/429a/e48e/abd04d8e9c57/1299aeaf75e6/01014306712-a1/01014306712-a1.jpg?ts=1707243316055&w=449", des: "SEAMLESS RIBBED FADED CROP TOP", price: "₹ 1,590.00"}, 
         {img: "https://static.zara.net/assets/public/86e4/b105/4e2e43de9fa6/c77d1108f7a8/00693401811-a1/00693401811-a1.jpg?ts=1704813105251&w=449", des: "VISCOSE BLEND KNIT T-SHIRT", price: "₹ 2,990.00"},
-        {img: "https://static.zara.net/assets/public/031f/3b09/dcec4535b7b1/681f10e1120c/15017210001-e1/15017210001-e1.jpg?ts=1704356771154&w=364", des: "RUNNING TRAINERS", price: "₹ 3,590.00"}
+        {img: "https://static.zara.net/assets/public/031f/3b09/dcec4535b7b1/681f10e1120c/15017210001-e1/15017210001-e1.jpg?ts=1704356771154&w=364", des: "RUNNING TRAINERS", price: "₹ 3,590.00"},
+        {img: "https://static.zara.net/assets/public/2dd7/2d25/b92e4ccdb2bc/0ec7fa0bb9ff/4000.jpg?ts=1694504062539&w=607", des: "FELT TEXTURE COAT", price: "₹ 3,290.00"},
+        {img: "https://static.zara.net/assets/public/8a52/e777/aa66418d972b/93a67c3e884f/05862430505-a1/05862430505-a1.jpg?ts=1706273502761&w=449", des: "SOFT CARGO TROUSERS", price: "₹ 4,990.00"},
+        {img: "https://static.zara.net/assets/public/f461/66a8/9b224011b43a/5a3820bbe47d/13002221500-e1/13002221500-e1.jpg?ts=1699953725734&w=449", des: "TEXTURED RIGID SUITCASE", price: "₹ 8,590.00"}
     ];
      
     let content = "";
