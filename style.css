@@ -195,17 +195,17 @@ nav {
     color: white;
 }
 
-.product_card {
-    flex-basis: 22%;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
 #products {
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px 5px;
-    place-items: center;
+    gap: 0px 18px;
+    justify-self: center;
+    align-self: center;
     grid-auto-rows: 1fr;
+
+}
+
+.product_card {
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 1290px) {

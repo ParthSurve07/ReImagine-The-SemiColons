@@ -331,25 +331,28 @@ const add_product = () => {
         {img: "https://static.zara.net/assets/public/6a1c/8e52/ddc546758801/d799a4bed501/03431301620-a1/03431301620-a1.jpg?ts=1708507160553&w=607", des: "SHORT SLEEVE T-SHIRT", price: "₹ 1,190.00"}, 
         {img: "https://static.zara.net/assets/public/429a/e48e/abd04d8e9c57/1299aeaf75e6/01014306712-a1/01014306712-a1.jpg?ts=1707243316055&w=449", des: "SEAMLESS RIBBED FADED CROP TOP", price: "₹ 1,590.00"}, 
         {img: "https://static.zara.net/assets/public/86e4/b105/4e2e43de9fa6/c77d1108f7a8/00693401811-a1/00693401811-a1.jpg?ts=1704813105251&w=449", des: "VISCOSE BLEND KNIT T-SHIRT", price: "₹ 2,990.00"},
-        {img: "https://static.zara.net/assets/public/031f/3b09/dcec4535b7b1/681f10e1120c/15017210001-e1/15017210001-e1.jpg?ts=1704356771154&w=364", des: "RUNNING TRAINERS WITH CONTRAST DETAILS", price: "₹ 3,590.00"}
-     ];
+        {img: "https://static.zara.net/assets/public/031f/3b09/dcec4535b7b1/681f10e1120c/15017210001-e1/15017210001-e1.jpg?ts=1704356771154&w=364", des: "RUNNING TRAINERS", price: "₹ 3,590.00"}
+    ];
      
-     let content = "";
+    let content = "";
      
-     prod.forEach(function (product, index) {
-         content += `<div class="max-w-[85%] product_card">
-                         <img src="${product.img}" alt="" w-[85%] object-cover>
-                         <div id="product_info" class="relative p-1 text-wrap productInfo">
-                             <div class="w-[90%]">
-                                 <p>${product.des}</p>
-                                 <p>${product.price}</p>
-                             </div>
-                             <div id="add_to_cart" class="add absolute top-[27%] right-0 cursor-pointer"><i class="fa-solid fa-plus add"></i></div>
-                         </div>
-                     </div>`
-     })
+    prod.forEach(function (product, index) {
+        content += `<div class="product_card mx-auto">
+                        <img src="${product.img}" alt="">
+                        <div id="product_info" class="relative p-1 text-wrap w-[100%]">
+                            <div class="w-[90%]">
+                                <p>${product.des}</p>
+                                <p>${product.price}</p>
+                            </div>
+                            <div id="add_to_cart" class="absolute top-[27%] right-[5%] cursor-pointer">
+                                <i class="fa-solid fa-plus add"></i>
+                            </div> 
+                        </div>
+                    </div>`
+    });
      
-     document.querySelector("#products").innerHTML = content;
+    document.querySelector("#products").innerHTML = content;
 }
+
 
 add_product();
