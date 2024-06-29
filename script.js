@@ -306,3 +306,12 @@ const checkLength = (event) => {
         input.value = input.value.slice(0, 10);
     }
 }
+
+const pills_animation = () => {
+    const pills = document.querySelector("#pills");
+
+    gsap.from(pills, {
+        x: '100vw',
+        duration: 2
+    })
+}

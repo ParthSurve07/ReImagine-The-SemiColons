@@ -182,6 +182,7 @@ nav {
     padding: 0.2rem 1rem;
     border-radius: 50px;
     transition: all 0.2s ease;
+    text-wrap: nowrap;
 }
 
 #pills ul li:hover {
@@ -229,6 +230,16 @@ nav {
 
     #products {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #category_boxes {
+        display: none;
+    }
+}
+
+@media (min-width: 1150px) {
+    #alternate_category {
+        display: none;
     }
 }
 
@@ -327,10 +338,6 @@ nav {
 }
 
 @media (max-width: 800px) {
-    #category_boxes {
-        display: none;
-    }
-
     #alternate_hero {
         display: block;
     }
