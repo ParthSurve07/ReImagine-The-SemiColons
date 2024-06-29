@@ -182,7 +182,7 @@ nav {
     padding: 0.2rem 1rem;
     border-radius: 50px;
     transition: all 0.2s ease;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 #pills ul li:hover {
