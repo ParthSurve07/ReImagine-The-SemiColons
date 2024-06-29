@@ -1,7 +1,6 @@
 
 
 // Loading animation of navbar
-const navbar = document.querySelector("#navbar");
 const loading_animation = () => {
     gsap.from("#navbar", {
         y: -150,
@@ -308,10 +307,10 @@ const checkLength = (event) => {
 }
 
 const pills_animation = () => {
-    const pills = document.querySelector("#pills");
-
-    gsap.from(pills, {
+    gsap.from("#pills", {
         x: '100vw',
-        duration: 2
+        duration: 1.2,
+        delay: 0.8
     })
 }
+pills_animation()
