@@ -178,27 +178,35 @@ nav {
     padding-bottom: 0.25rem;
 }
 
-#pills ul {
+#pills ul,
+#w_pills ul,
+#m_pills ul {
     padding: 0 5vw;
 }
 
-#pills ul li {
+#pills ul li,
+#w_pills ul li,
+#m_pills ul li {
     width: 6.5rem;
     text-align: center;
     border: 2px solid black;
     cursor: pointer;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0;
     border-radius: 50px;
     transition: all 0.2s ease;
     white-space: nowrap;
 }
 
-#pills ul li:hover {
+#pills ul li:hover, 
+#w_pills ul li:hover,
+#m_pills ul li:hover {
     background-color: black;
     color: white;
 }
 
-#pills ul li.active {
+#pills ul li button:active,
+#w_pills ul li button:active,
+#m_pills ul li button:active {
     background-color: #000;
     color: white;
 }
@@ -270,6 +278,10 @@ nav {
     margin-bottom: 8rem;
 }
 
+#home_img {
+    display: hidden;
+}
+
 @media (max-width: 1290px) {
     #cont_buttons {
         flex-direction: column;
@@ -323,7 +335,7 @@ nav {
 
 @media (min-width: 1150px) {
     #alternate_category {
-        display: none;
+        /* display: none; */
     }
 }
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta typedata-type="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZARA India | New Collection Online</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
@@ -22,11 +22,11 @@
     <!-- NAVBAR -->
     <div id="navbar" class="sticky top-0 z-10">
         <nav class="flex justify-between items-center px-4 py-4 sticky top-0 w-[87vw] mx-auto z-10">
-            <div id="logo">
-                <a href="#"><img src="logo.svg" alt="" class="w-40"></a>
+            <div id="logo" onclick="window.location.reload()" class="cursor-pointer">
+                <img src="logo.svg" alt="" class="w-40">
             </div>
             <div id="search" class="relative">
-                <input type="search" name="search" id="search" placeholder="Search"
+                <input type="search" typedata-type="search" id="search" placeholder="Search"
                     class="w-[28vw] px-6 py-2 rounded-[50px] bg-gray-200">
                 <i class="fa-solid fa-magnifying-glass absolute top-[27%] right-[6%] cursor-pointer"></i>
             </div>
@@ -45,19 +45,31 @@
                     onclick="login2()">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <a href="cart.html">
-                    <div id="cart"
-                        class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                </a>
+                <div id="cart"
+                    class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black" onclick="open_cart()">
+                    <i id="cart_img" class="fa-solid fa-cart-shopping" onclick="open_cart()"></i>
+                </div>
+                <div id="home"
+                    class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black hidden" onclick="close_cart()">
+                    <i id="home_img" class='bx bx-home-alt-2'></i>
+                </div>
             </div>
         </nav>
     </div>
 
+    <div id="alternate_category"
+            class="flex w-[100%] bg-black h-10 justify-center items-center text-sm md:text-basex">
+            <ul class="flex gap-8">
+                <li class="hover-line"><a href="women.html">WOMAN</a></li>
+                <li class="hover-line"><a href="men.html">MAN</a></li>
+                <li class="hover-line"><a href="kids.html">KIDS</a></li>
+                <li class="hover-line"><a href="beauty.html">BEAUTY</a></li>
+            </ul>
+    </div>
+
     <div id="main" class="relative w-[100vw]">
         <!-- HERO CONTENT -->
-        <div id="category_boxes" class="w-[90vw] mx-auto my-12 p-3 flex items-center justify-evenly">
+        <div id="category_boxes" class="w-[90vw] mx-auto my-12 p-3 hidden items-center justify-evenly">
             <a href="women.html">
                 <div id="women" class="flex flex-col items-center relative box_of_images">
                     <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -88,93 +100,60 @@
             </a>
         </div>
 
-        <div id="alternate_category"
-            class="flex w-[100%] bg-black h-10 justify-center items-center text-sm md:text-basex">
-            <ul class="flex gap-8">
-                <li class="hover-line"><a href="women.html">WOMAN</a></li>
-                <li class="hover-line"><a href="men.html">MAN</a></li>
-                <li class="hover-line"><a href="kids.html">KIDS</a></li>
-                <li class="hover-line"><a href="beauty.html">BEAUTY</a></li>
-            </ul>
+        <div id="cart_container" class="hidden w-[100%] h-[100%]">
+            <div id="cart_heading" class="w-[83%]">
+                Shopping Bag
+            </div>
+            <div id="cart_sections" class="w-[90%] flex mx-auto gap-8 justify-evenly relative">
+                <section id="section1" class="cart_items w-[55%]">
+    
+                </section>
+    
+                <section id="section2" class="w-[30%]">
+                    <div id="checkout_summary">
+                        <p>Order Summary</p>
+                    </div>
+                    <div class="total_box flex flex-col gap-y-4">
+                        <div class="flex justify-between">
+                            <p>Subtotal</p>
+                            <p>₹ 2,990</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Shipping</p>
+                            <p>₹ 590</p>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between">
+                            <p>Estimated total</p>
+                            <p>₹ 3,490</p>
+                        </div>
+                        <div class="checkout w-[100%]">
+                            <button class="bg-black text-white w-[100%] p-3">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-
-        <!-- Products -->
-        <div id="pills" class="mx-auto my-8 w-[100vw]">
-            <ul class="flex gap-4 overflow-scroll no-scrollbar justify-center items-center">
-                <li><button class="active" data-name="T-Shirts">T-Shirts</button></li>
-                <li><button class="active" data-name="Trousers">Trousers</button></li>
-                <li><button class="active" data-name="Shorts">Shorts</button></li>
-                <li><button class="active" data-name="Jeans">Jeans</button></li>
-                <li><button class="active" data-name="Shoes">Shoes</button></li>
-                <li><button class="active" data-name="Jackets">Jackets</button></li>
-                <li><button class="active" data-name="Swimware">Swimware</button></li>
-                <li><button class="active" data-name="Bags">Bags</button></li>
-            </ul>
-        </div>
-
-    <div id="products" class="mx-auto my-16 max-w-[85%] grid text-sm"></div>
-
     </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-black w-[100%] flex lg:px-20 relative text-white">
-        <div id="first_f" class="w-[25%] text-wrap px-10 py-10">
-            <div id="zara_logo" class="w-[60%]">
-                <img src="footer.svg" alt="Zara logo">
-            </div>
-            <div id="description" class="my-8 w-[75%]">
-                <p>Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs,
-                    collections & lookbooks every week.</p>
-            </div>
-        </div>
-        <div id="second" class="flex flex-col w-[75%]">
-            <div id="second_f" class="flex w-full">
-                <div id="second_f_1" class="w-[35%] py-10 px-10 text-[0.95rem]">
-                    <div id="browse_box" class="px-1 left_border">
-                        <span class="font-bold">Browse</span>
-                    </div>
-                    <div>
-                        <ul class="flex flex-col gap-2">
-                            <li><a href="" class="hover-line">Home</a></li>
-                            <li><a href="" class="hover-line">About Us</a></li>
-                            <li><a href="" class="hover-line">Services</a></li>
-                            <li><a href="" class="hover-line">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="w-[60%] text-wrap">
-                    <div id="first" class="flex flex-col py-10 px-8">
-                        <span class="left_border px-1 font-bold">Manufacturer</span>
-                        <span class="text-[0.85rem] text-wrap">INDUSTRIA DE DISENO TEXTIL_ S.A. (INDITEX, s_A_) <br>
-                            AVENIDA DE LA
-                            DIPUTACIÖN. EDIFICIO INDITEX. 15143, ARTEIXO (A CORONA). SPAIN</span>
-                    </div>
-                </div>
-            </div>
-            <div id="follow" class="w-full px-10">
-                <div id="follow_text" class="left_border px-1">
-                    <span>Follow us</span>
-                </div>
-                <div id="social">
-                    <ul class="flex gap-x-10 text-xl">
-                        <li><a href="https://www.instagram.com/zara/?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588623107"
-                                target="_blank"><i class="fa-brands fa-instagram hover-line"></i></a></li>
-                        <li><a href="https://www.facebook.com/Zara?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588641190"
-                                target="_blank"><i class="fa-brands fa-facebook-f hover-line"></i></a></li>
-                        <li><a href="https://twitter.com/ZARA?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588656769"
-                                target="_blank"><i class="fa-brands fa-x-twitter hover-line"></i></a></li>
-                        <li><a href="https://es.pinterest.com/zaraofficial?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588662573"
-                                target="_blank"><i class="fa-brands fa-pinterest-p hover-line"></i></a></li>
-                        <li><a href="http://www.youtube.com/user/zara?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588668924"
-                                target="_blank"><i class="fa-brands fa-youtube hover-line"></i></a></li>
-                        <li><a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588674964"
-                                target="_blank"><i class="fa-brands fa-spotify hover-line"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
+    <!-- Products -->
+    <div id="pills" class="mx-auto my-8 w-[100vw]">
+            <ul class="flex gap-4 overflow-scroll no-scrollbar justify-center items-center">
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="All">All</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="T-Shirts">T-Shirts</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Trousers">Trousers</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Shorts">Shorts</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Jeans">Jeans</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Shoes">Shoes</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Jackets">Jackets</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Swimware">Swimware</button></li>
+                <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Dress">Dress</button></li>
+            </ul>
+    </div>
+
+    <div id="products" class="mx-auto my-16 max-w-[85%] grid text-sm"></div>
 
     <div id="login_overlay" class="w-[100%] h-[100vh] justify-center items-center hidden absolute top-0 z-20">
         <div id="main_login"
@@ -246,7 +225,66 @@
         </div>
     </div>
 
+    
 
+
+    <footer class="bg-black w-[100%] flex lg:px-20 relative text-white">
+        <div id="first_f" class="w-[25%] text-wrap px-10 py-10">
+            <div id="zara_logo" class="w-[60%]">
+                <img src="footer.svg" alt="Zara logo">
+            </div>
+            <div id="description" class="my-8 w-[75%]">
+                <p>Latest trends in clothing for women, men & kids at ZARA online. Find new arrivals, fashion catalogs,
+                    collections & lookbooks every week.</p>
+            </div>
+        </div>
+        <div id="second" class="flex flex-col w-[75%]">
+            <div id="second_f" class="flex w-full">
+                <div id="second_f_1" class="w-[35%] py-10 px-10 text-[0.95rem]">
+                    <div id="browse_box" class="px-1 left_border">
+                        <span class="font-bold">Browse</span>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-2">
+                            <li><a href="" class="hover-line">Home</a></li>
+                            <li><a href="" class="hover-line">About Us</a></li>
+                            <li><a href="" class="hover-line">Services</a></li>
+                            <li><a href="" class="hover-line">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-[60%] text-wrap">
+                    <div id="first" class="flex flex-col py-10 px-8">
+                        <span class="left_border px-1 font-bold">Manufacturer</span>
+                        <span class="text-[0.85rem] text-wrap">INDUSTRIA DE DISENO TEXTIL_ S.A. (INDITEX, s_A_) <br>
+                            AVENIDA DE LA
+                            DIPUTACIÖN. EDIFICIO INDITEX. 15143, ARTEIXO (A CORONA). SPAIN</span>
+                    </div>
+                </div>
+            </div>
+            <div id="follow" class="w-full px-10">
+                <div id="follow_text" class="left_border px-1">
+                    <span>Follow us</span>
+                </div>
+                <div id="social">
+                    <ul class="flex gap-x-10 text-xl">
+                        <li><a href="https://www.instagram.com/zara/?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588623107"
+                                target="_blank"><i class="fa-brands fa-instagram hover-line"></i></a></li>
+                        <li><a href="https://www.facebook.com/Zara?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588641190"
+                                target="_blank"><i class="fa-brands fa-facebook-f hover-line"></i></a></li>
+                        <li><a href="https://twitter.com/ZARA?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588656769"
+                                target="_blank"><i class="fa-brands fa-x-twitter hover-line"></i></a></li>
+                        <li><a href="https://es.pinterest.com/zaraofficial?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588662573"
+                                target="_blank"><i class="fa-brands fa-pinterest-p hover-line"></i></a></li>
+                        <li><a href="http://www.youtube.com/user/zara?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588668924"
+                                target="_blank"><i class="fa-brands fa-youtube hover-line"></i></a></li>
+                        <li><a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv?_sp=41b42dbb-86dc-474b-a246-6afb910a700d.1719588674964"
+                                target="_blank"><i class="fa-brands fa-spotify hover-line"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZARA India | New Collection Online</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
@@ -25,7 +25,7 @@
                 <a href="index.html"><img src="logo.svg" alt="" class="w-40"></a>
             </div>
             <div id="search" class="relative">
-                <input type="search" name="search" id="search" placeholder="Search"
+                <input type="search" type="search" id="search" placeholder="Search"
                     class="w-[28vw] px-6 py-2 rounded-[50px] bg-gray-200">
                 <i class="fa-solid fa-magnifying-glass absolute top-[27%] right-[6%] cursor-pointer"></i>
             </div>
@@ -44,12 +44,14 @@
                     onclick="login2()">
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <a href="cart.html">
-                    <div id="cart"
-                        class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                </a>
+                <div id="cart"
+                    class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black" onclick="open_cart()">
+                    <i id="cart_img" class="fa-solid fa-cart-shopping" onclick="open_cart()"></i>
+                </div>
+                <div id="home"
+                    class="bg-black text-white py-2 px-3 rounded-[50%] text-center cursor-pointer border-2 border-black hidden" onclick="close_cart()">
+                    <i id="home_img" class='bx bx-home-alt-2'></i>
+                </div>
             </div>
         </nav>
     </div>
@@ -64,16 +66,17 @@
             </ul>
     </div>
 
-    <div id="pills" class="mx-auto my-8 w-[100vw]">
+    <div id="w_pills" class="mx-auto my-8 w-[100vw]">
         <ul class="flex gap-4 overflow-scroll no-scrollbar justify-center items-center">
-            <li><button class="active" data-name="T-Shirts">T-Shirts</button></li>
-            <li><button class="active" data-name="Trousers">Trousers</button></li>
-            <li><button class="active" data-name="Shorts">Shorts</button></li>
-            <li><button class="active" data-name="Jeans">Jeans</button></li>
-            <li><button class="active" data-name="Shoes">Shoes</button></li>
-            <li><button class="active" data-name="Jackets">Jackets</button></li>
-            <li><button class="active" data-name="Swimware">Swimware</button></li>
-            <li><button class="active" data-name="Bags">Bags</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="All">All</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="T-Shirts">T-Shirts</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Trousers">Trousers</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Shorts">Shorts</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Jeans">Jeans</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Shoes">Shoes</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Jackets">Jackets</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Swimware">Swimware</button></li>
+            <li><button class="active w-[100%] h-[100%] rounded-[50px]" data-type="Dress">Dress</button></li>
         </ul>
     </div>
 

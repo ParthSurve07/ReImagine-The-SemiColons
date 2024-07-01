@@ -38,5 +38,3 @@ const add = () => {
     
     document.querySelector("#section1").innerHTML = content;
 }
-
-add();
